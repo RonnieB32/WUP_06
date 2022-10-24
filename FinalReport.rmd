@@ -86,13 +86,21 @@ The numerical results demonstrates that 65 oercent of white people favor capital
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
-
-`
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+ 
 
 ## More data version
 
+The fishers xy function shows there is a statistical diffrence on the veiws towards capital punishment betwenn the white and black people.When we got more data the p value of each race category indicates that there is a statistical difference between each race.The biggest diffrence is with the white people and the black because they have the lowest p value.
 
+```{r}
+fisherXY(mydata$race,mydata$cappun)
+```
+The p value in this test is 0 so it shows us that all races are going to have diffrent opinions 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
